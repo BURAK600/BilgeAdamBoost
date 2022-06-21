@@ -1,0 +1,81 @@
+package bilgeadamweek2;
+
+import java.util.Scanner;
+
+public class HarfYazdir1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner scanner = new Scanner(System.in);
+
+		boolean menuTekrar = true;
+
+		System.out.println(" =========Menu=============");
+		System.out.println(" 1: (Kolay) Icinde iki adet rakamın toplamını isteyen string ifade gir   ");
+		System.out.println(" 2: (Kolay) Icinde iki adet rakamın carpimini isteyen string ifade gir   ");
+		System.out.println(" 3: (Zor) Icinde iki adet sayinin carpimini isteyen string ifade gir   ");
+
+		System.out.println("Seciminiz: ");
+		int n = scanner.nextInt();
+		scanner.nextLine();
+
+		switch (n) {
+		case 1:
+
+			System.out.print("Kelime giriniz: ");
+			String s = scanner.nextLine();
+			int k2 = 0;
+			for (int i = 0; i < s.length(); i++) {
+				if (s.charAt(i) >= 48 && s.charAt(i) <= 57) {
+
+					int k1 = Integer.parseInt(String.valueOf(s.charAt(i)));
+					k2 += k1;
+
+				}
+			}
+			System.out.println(k2);
+			break;
+		case 2:
+
+			System.out.print("Kelime giriniz: ");
+			String s1 = scanner.nextLine();
+			int k3 = 1;
+			for (int i = 0; i < s1.length(); i++) {
+				if (s1.charAt(i) >= 48 && s1.charAt(i) <= 57) {
+
+					int k1 = Integer.parseInt(String.valueOf(s1.charAt(i)));
+					k3 *= k1;
+
+				}
+			}
+			System.out.println(k3);
+			break;
+
+		case 3:
+
+			System.out.print("Kelime giriniz: ");
+			String s2 = scanner.nextLine();
+
+			int k = 1;
+			int k1 = 0;
+			for (int i = s2.length() - 1; i > 0; i--) {
+
+				if (s2.charAt(i) >= 48 && s2.charAt(i) <= 57) {
+
+					k1 += k * Integer.parseInt(String.valueOf(s2.charAt(i)));
+					k *= 10;
+
+				}
+			}
+
+			System.out.println(k1);
+
+			break;
+
+		default:
+			break;
+		}
+	}
+
+}

@@ -1,0 +1,17 @@
+package bilgeadamweek2;
+
+import week2.StringOrnek;
+
+public class HarfYazdir {
+	public static void main(StringOrnek[] args) {
+
+		char harf;
+
+		for (harf = 97; harf <= 122; harf++) {
+			System.out.print(harf + ",");
+
+		}
+
+	}
+
+}

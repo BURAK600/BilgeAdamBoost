@@ -1,0 +1,25 @@
+package bilgeadamweek2;
+
+public class ArraysMaxMinus {
+
+	public static void main(String[] args) {
+		int[] array = { 4, 6, 64, 67, 6, 78, 65, 54, 45, 2, 44 };
+		int max = 0;
+		int j = 1;
+
+		for (int i = 0; i < array.length; i++, j++) {
+
+			if (i + 1 < array.length) {
+				if (max < Math.abs(array[i] - array[j])) {
+					max = Math.abs(array[i] - array[j]);
+
+				}
+
+			}
+
+		}
+		System.out.println("max fark: " + max);
+
+	}
+
+}

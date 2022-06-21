@@ -1,0 +1,9 @@
+package assignmentma;
+
+public class Sil {
+	public static void main(String[] args) {
+		String aString = "Atatürk";
+		System.out.println(A.replace(A.charAt(0), A.substring(0,1)));
+	}
+
+}

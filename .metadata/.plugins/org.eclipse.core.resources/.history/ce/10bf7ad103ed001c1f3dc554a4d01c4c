@@ -1,0 +1,22 @@
+package assignmentma;
+
+import java.util.Scanner;
+
+public class StringDortIslem {
+	public static void main(String[] args) {
+		
+		
+		Scanner scanner = new Scanner(System.in);
+
+		System.out.print("Kelime giriniz: ");
+
+		String s = scanner.nextLine();
+
+		for (int i = 0; i < s.length(); i++) {
+			System.out.println(i + " 'nci harf " + s.charAt(i));
+		}
+		
+
+	}
+
+}

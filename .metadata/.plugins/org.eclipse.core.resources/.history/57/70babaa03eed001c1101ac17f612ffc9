@@ -1,0 +1,61 @@
+package com.burak;
+
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URI;
+import java.net.URL;
+import java.util.Scanner;
+
+public class RunnerBurcYorumu {
+	
+	/**
+	 * 
+	 * @param args
+	 * @throws MalformedURLException
+	 * @throws IOException
+	 * 
+	 * 
+	 * 
+	 * BURC YORUM 
+	 * 
+	 * 1 sitenin icerigini almak
+	 * 
+	 * 2 gelen icerigi satir satir okumaliyim
+	 * 
+	 * 
+	 */
+	
+	
+	
+	public static void main(String[] args) throws MalformedURLException, IOException {
+		
+		Scanner scannerSite = new Scanner(new URL("https://www.elle.com.tr/astroloji").openStream());
+		
+		/*bir sayi giriniz
+		 * 
+		 * "fegggegege": nextLine();
+		 * scanner -> satir satir okur. okunulan degerin sonuna geldin mi?  hasNext() -> return true/false
+		 *
+		 * 
+		 */
+		while (scannerSite.hasNext()) {
+			System.out.println(scannerSite.nextLine());
+			
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

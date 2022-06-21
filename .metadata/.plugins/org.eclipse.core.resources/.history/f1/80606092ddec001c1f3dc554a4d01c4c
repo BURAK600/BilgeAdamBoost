@@ -1,0 +1,81 @@
+package assignmentma;
+
+import java.util.Scanner;
+
+public class YildizHareket {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+
+		boolean check = true;
+
+		do {
+
+			System.out.print("Tek sayi giriniz: ");
+			int n = scanner.nextInt();
+			if (n % 2 == 0) {
+				System.out.print("Tek sayi giriniz: ");
+				check = false;
+
+			} else {
+
+				boolean check1 = true;
+				int k = n * n;
+				int m = k;
+
+				do {
+					System.out.println("Yon seciniz (2 asagi, 8 yukari, 4 sol, 6 sağ) :  ");
+
+					int select = scanner.nextInt();
+					if (select == 6) {
+						if (k % n == 0) {
+							k = k - (2 * n - 1);
+						} else {
+							k++;
+						}
+					} else if (select == 4) {
+						if (k % n == 0) {
+							k = k + (2 * n - 1);
+						} else {
+							k++;
+						}
+					} else if (select == 8) {
+
+						if (k == n) {
+							k += 8 * n;
+						} else {
+							k -= 2 * n;
+						}
+					} else if (select == 2) {
+
+						if (k == (m - (n / 2))) {
+							System.out.println("k nın degeri: " + k);
+							k -= (4 * n - 1);
+
+						} else {
+							k += 2 * n;
+						}
+					} else {
+						check1 = false;
+						check = false;
+					}
+
+					for (int i = 1; i <= n * n; i++) {
+						if ((k / 2) + 1 == i) {
+							System.out.print("?");
+						} else {
+							System.out.print("*");
+						}
+
+						if (i % n == 0) {
+							System.out.println();
+						}
+					}
+
+				} while (check1);
+			}
+
+		} while (check);
+
+	}
+}

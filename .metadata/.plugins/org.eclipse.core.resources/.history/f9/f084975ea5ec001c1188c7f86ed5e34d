@@ -1,0 +1,68 @@
+package bilgeadamweek2;
+
+import java.util.Scanner;
+
+public class MenuluSorular {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		boolean menuTekrar = true;
+		while (menuTekrar) {
+			System.out.println("=========Menu=============");
+			System.out.println(
+					"1: Disaridan girilen kelimenin icinde \"a\" harfi sayisini ve indeks numaralarini bulunuz. ");
+			System.out.println("2:  ");
+
+			System.out.println("0: Sistemden cikis");
+
+			System.out.print("Secim yapiniz: ");
+
+			int n = scanner.nextInt();
+			int sayac = 0;
+			scanner.nextLine();
+
+			switch (n) {
+			case 1:
+				System.out.println("kelime giriniz: ");
+
+				String kelimeString = scanner.nextLine();
+
+				if (!kelimeString.contains("a")) {
+					System.out.println("Harf bulunamadi! ");
+				}
+				for (int i = 0; i < kelimeString.length(); i++) {
+
+					if (kelimeString.charAt(i) == 'a') {
+						System.out.println("a'nin index numarasi: " + i);
+						sayac++;
+					}
+				}
+				System.out.println();
+				break;
+			case 2:
+				System.out.print("Kelime giriniz: ");
+				String kelimeString1 = scanner.nextLine();
+				System.out.print("Harf giriniz: ");
+				String harfStringOld = scanner.nextLine();
+				System.out.print("Degistirilecek harfi giriniz: ");
+				String harfStringNew = scanner.nextLine();
+
+				if (kelimeString1.contains(harfStringOld)) {
+
+					kelimeString1 = kelimeString1.replace(harfStringOld, harfStringNew);
+					System.out.println("yeni kelime: " + kelimeString1);
+				}
+				break;
+
+			case 0:
+				System.out.println("Sistemden cikis yaptiniz!");
+				menuTekrar = false;
+				break;
+			default:
+				menuTekrar = false;
+				System.out.println("Yanlis secim yaptiniz! ");
+				break;
+			}
+		}
+	}
+}

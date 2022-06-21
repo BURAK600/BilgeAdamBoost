@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;week3.MethodKullanimi&apos; to &apos;MethodKullanimiVarargs&apos;&#x0D;&#x0A;- Original project: &apos;Topics&apos;&#x0D;&#x0A;- Original element: &apos;week3.MethodKullanimi&apos;&#x0D;&#x0A;- Renamed element: &apos;week3.MethodKullanimiVarargs&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;MethodKullanimi&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;week3{MethodKullanimi.java[MethodKullanimi" matchStrategy="1" name="MethodKullanimiVarargs" qualified="false" references="true" similarDeclarations="false" stamp="1655797991586" textual="false" version="1.0"/>
+</session>

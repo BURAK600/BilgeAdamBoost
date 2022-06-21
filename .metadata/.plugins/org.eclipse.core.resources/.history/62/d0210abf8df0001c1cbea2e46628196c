@@ -1,0 +1,52 @@
+package bilgeadamweek3;
+
+import java.util.Iterator;
+
+
+public class MethodObebOkek {
+	
+	public static void main(String[] args) {
+		
+		
+		okekBul(4, 8);
+		
+		
+		
+		
+	}
+
+	public static int obebBul(int n1, int n2) {
+		
+		int nObeb = 1;
+		int min  =0;
+		
+		if(n1==n2) {
+			nObeb = n1;
+		}
+		else {
+			n2 = min;
+			if(n1<n2) {
+				min = n1;	
+			}
+			for (int i = 1; i <min ; i++) {
+				if(n1%i ==0 && n2%i==0) {
+					nObeb *=i;
+				}
+				
+			}
+		}
+		return nObeb;
+	}
+		
+	public static void okekBul(int n1,int n2) {
+		  
+		  int okek = 1;
+		  okek = (n1*n2)/obebBul(n1, n2);
+		  System.out.println(n1 + " ve " + n2 + "'n OKEK degeri: " + okek);
+		  
+	  }
+	
+		
+	}
+	
+	

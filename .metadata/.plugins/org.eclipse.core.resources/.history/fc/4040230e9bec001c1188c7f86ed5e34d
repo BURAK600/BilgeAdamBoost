@@ -1,0 +1,52 @@
+package bilgeadamweek2;
+
+import java.util.Scanner;
+
+public class MenuluSorular {
+
+	public static void main(String[] args) {
+		System.out.println("=========Menu=============");
+		System.out.println("1-");
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		String kelimeString = scanner.nextLine();
+		
+		
+		System.out.print("bir sayi giriniz: ");
+		
+		int n = scanner.nextInt();
+		int sayac;
+		
+		
+		switch (n) {
+		case 1:
+			for (int i = 0; i < kelimeString.length(); i++) {
+				
+			
+				if (kelimeString.contains("a")) {
+					sayac = kelimeString.indexOf("a");
+					System.out.println("index: " + sayac);
+					kelimeString = kelimeString.substring(sayac);
+					
+				}
+			}
+			
+			break;
+		case 0:
+			System.out.println("Sistemden cikis yaptiniz!");
+			break;
+			
+
+		default:
+			break;
+		}
+		
+		
+	
+		
+		
+
+	}
+
+}

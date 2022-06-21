@@ -1,0 +1,48 @@
+package bilgeadamweek2;
+
+import java.util.Scanner;
+
+public class MenuluSorular {
+
+	public static void main(String[] args) {
+		System.out.println("=========Menu=============");
+		System.out.println("1-");
+
+		Scanner scanner = new Scanner(System.in);
+
+		System.out.print("Secim yapiniz: ");
+
+		int n = scanner.nextInt();
+		int sayac =0;
+		scanner.nextLine();
+
+		switch (n) {
+		case 1:
+			System.out.println("kelime giriniz: ");
+
+			String kelimeString = scanner.nextLine();
+				
+				if (!kelimeString.contains("a")) {
+					System.out.println("Harf bulunamadi! ");
+				}
+				for (int i = 0; i < kelimeString.length(); i++) {
+
+				if (kelimeString.charAt(i)=='a') {
+					System.out.println("index numarasi: " + sayac);
+					sayac++;
+				}
+				
+			}
+
+			break;
+		case 0:
+			System.out.println("Sistemden cikis yaptiniz!");
+			break;
+
+		default:
+			break;
+		}
+
+	}
+
+}

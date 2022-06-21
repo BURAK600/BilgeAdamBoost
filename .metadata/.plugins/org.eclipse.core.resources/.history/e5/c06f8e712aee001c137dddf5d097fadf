@@ -1,0 +1,13 @@
+package bilgeadamweek2;
+
+import week2.StringOrnek;
+
+public class ToplamıBul {
+	public static void main(StringOrnek[] args) {
+
+		for (int i = 0; i < 9; i++) {
+
+		}
+	}
+
+}

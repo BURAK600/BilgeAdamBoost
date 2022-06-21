@@ -1,0 +1,136 @@
+package bilgeadamweek3;
+
+import java.util.Scanner;
+
+public class MethodHesapMakinesi {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scanner = new Scanner(System.in);
+		int input;
+
+		do {
+			System.out.println("===== Hesap Makinesi =========");
+
+			System.out.println("1- Topla");
+			System.out.println("2- Cikarma");
+			System.out.println("3- Carpma");
+			System.out.println("4- Bolme");
+			System.out.println("5- Faktoriyel");
+			System.out.println("6- Us hesaplama");
+			System.out.println("7- Asal kontrolu");
+			System.out.println("0- Cikis");
+
+			System.out.print("Bir islem seciniz: ");
+			input = scanner.nextInt();
+
+			switch (input) {
+			case 1:
+				topla();
+				break;
+			case 2:
+				cikar();
+				break;
+			case 3:
+				carp();
+				break;
+//			case 4:
+//				bol();
+//				break;
+//			case 5:
+//				faktoriyelHesapla();
+//				break;
+//			case 6:
+//				usAl();
+//				break;
+//			case 7:
+//				asalKontrol();
+//				break;
+
+			default:
+				break;
+			}
+
+		} while (!(input == 0));
+
+	}
+
+	private static void topla() {
+		Scanner scanner = new Scanner(System.in);
+
+		int toplam = 0;
+		String inputString = "";
+
+		do {
+
+			System.out.print("Sayi giriniz: ");
+			int sayi = scanner.nextInt();
+
+			scanner.nextLine();
+
+			toplam += sayi;
+			System.out.println("Islemi sonlanrıemak icin \"=\" tusuna basiniz");
+
+			inputString = scanner.nextLine();
+
+		} while (!(inputString.equals("=")));
+
+		System.out.println("toplam = " + toplam);
+
+	}
+
+	private static void cikar() {
+		Scanner scanner = new Scanner(System.in);
+
+		int fark = 0;
+		String inputString = "";
+		int sayi;
+		int count = 0;
+
+		do {
+
+			System.out.print("Sayi giriniz: ");
+			sayi = scanner.nextInt();
+			scanner.nextLine();
+
+			if (count == 1) {
+				fark = sayi;
+			} else {
+				fark -= sayi;
+			}
+			System.out.println("Islemi sonlanrıemak icin \"=\" tusuna basiniz");
+			inputString = scanner.nextLine();
+
+		} while (!(inputString.equals("=")));
+
+		System.out.println("fark = " + fark);
+	}
+
+	private static void carp() {
+		Scanner scanner = new Scanner(System.in);
+
+		int carpim = 1;
+		String inputString = "";
+		int sayi;
+		int count = 0;
+
+		do {
+
+			System.out.print("Sayi giriniz: ");
+			sayi = scanner.nextInt();
+			scanner.nextLine();
+
+			if (count == 1) {
+				carpim = sayi;
+			} else {
+				carpim *= sayi;
+			}
+			System.out.println("Islemi sonlandirmak icin \"=\" tusuna basiniz");
+			inputString = scanner.nextLine();
+
+		} while (!(inputString.equals("=")));
+
+		System.out.println("carpim = " + carpim);
+	}
+
+}

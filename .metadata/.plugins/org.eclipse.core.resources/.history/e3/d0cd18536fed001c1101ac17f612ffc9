@@ -1,0 +1,26 @@
+package bilgeadamweek2;
+
+import java.util.Scanner;
+
+public class ArraysIn {
+	
+	public static void main(String[] args) {
+		
+	
+	Scanner scanner = new Scanner(System.in);
+	
+	String[]  dizi = {"Türkiye", "Japonya","Mogolistan","Danimarka"};
+	
+	String string = scanner.nextLine();
+	for (int i = 0; i < dizi.length; i++) {
+		if(string.equals(dizi[i])) {
+			System.out.println("Oge bulundu");
+		}
+		else {
+			System.out.println("Oge bulunamadı");
+		}
+	}
+	}
+	
+
+}

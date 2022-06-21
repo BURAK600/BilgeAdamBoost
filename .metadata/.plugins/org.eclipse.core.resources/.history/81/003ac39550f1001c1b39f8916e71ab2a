@@ -1,0 +1,27 @@
+package bilgeadamweek3;
+
+import java.util.Scanner;
+
+public class MethodYas {
+
+	public static void main(String[] args) {
+
+		yuzYilYas(1994);
+
+	}
+
+	private static void yuzYilYas(int dy) {
+
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Dogum yilinizi giriniz: ");
+		dy = scanner.nextInt();
+
+		int yuzyil = (dy / 100) + 1;
+		int yas = 2022 - dy;
+
+		System.out.println("Yasadiginiz yuzyil: " + yuzyil);
+		System.out.println("Yasiniz: " + yas);
+
+	}
+
+}
